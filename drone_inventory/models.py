@@ -1,10 +1,12 @@
-from flask_sqlalchemy import SQLAlchemy
-from flask_migrate import Migrate
+# anything with flask_ is a wrapper, different way to build it 
+from flask_sqlalchemy import SQLAlchemy # <---- a wrapper for SQLAlchemy (query, etc)
+from flask_migrate import Migrate # <--- a wrapper for Migrate and Migrate makes it easier to change database models/information
 from datetime import datetime
-import uuid
+import uuid # <---- provides a unique identifier (string)
 
 # Adding Flask Security for Passwords
-from werkzeug.security import generate_password_hash, check_password_hash
+from werkzeug.security import generate_password_hash, check_password_hash # <---- part of flask. Tools to hash password so when storing passwords, it
+# converts it to a hash value so others can't see your actual password 
 
 # Creates hex tokens for our API access
 import secrets 
